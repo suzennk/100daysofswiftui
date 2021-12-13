@@ -12,6 +12,7 @@ struct ViewsAndModifiersApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            SomeView()
         }
     }
 }
