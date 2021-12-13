@@ -13,6 +13,7 @@ struct ViewsAndModifiersApp: App {
         WindowGroup {
             ContentView()
             SomeView()
+            ConditionalModifiers()
         }
     }
 }
