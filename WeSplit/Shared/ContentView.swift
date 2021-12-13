@@ -36,6 +36,7 @@ struct ContentView: View {
                     TextField("Amount",             // placeholder
                               value: $checkAmount,  // two-way binding
                               format: .currency(code: Locale.current.currencyCode ?? "USD"))        // textfield formatter, use local currenty
+                        .foregroundColor(tipPercentage == 0 ? .red : .black)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                     
