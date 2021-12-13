@@ -15,6 +15,7 @@ struct ViewsAndModifiersApp: App {
             SomeView()
             ConditionalModifiers()
             EnvironmentModifiers()
+            ViewsAsProperties()
         }
     }
 }
