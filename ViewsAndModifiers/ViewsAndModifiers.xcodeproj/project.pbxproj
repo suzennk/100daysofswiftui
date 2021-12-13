@@ -17,6 +17,8 @@
 		0851FCBD27675E1A0066A3F8 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCBB27675E1A0066A3F8 /* SomeView.swift */; };
 		0851FCBF276761470066A3F8 /* ConditionalModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCBE276761470066A3F8 /* ConditionalModifiers.swift */; };
 		0851FCC0276761470066A3F8 /* ConditionalModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCBE276761470066A3F8 /* ConditionalModifiers.swift */; };
+		0851FCC2276763980066A3F8 /* EnvironmentModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCC1276763980066A3F8 /* EnvironmentModifiers.swift */; };
+		0851FCC3276763980066A3F8 /* EnvironmentModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCC1276763980066A3F8 /* EnvironmentModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		0851FCAC27675AEA0066A3F8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		0851FCBB27675E1A0066A3F8 /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
 		0851FCBE276761470066A3F8 /* ConditionalModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalModifiers.swift; sourceTree = "<group>"; };
+		0851FCC1276763980066A3F8 /* EnvironmentModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 				0851FC9E27675AE50066A3F8 /* ContentView.swift */,
 				0851FCBB27675E1A0066A3F8 /* SomeView.swift */,
 				0851FCBE276761470066A3F8 /* ConditionalModifiers.swift */,
+				0851FCC1276763980066A3F8 /* EnvironmentModifiers.swift */,
 				0851FC9F27675AEA0066A3F8 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -185,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0851FCBC27675E1A0066A3F8 /* SomeView.swift in Sources */,
+				0851FCC2276763980066A3F8 /* EnvironmentModifiers.swift in Sources */,
 				0851FCAF27675AEA0066A3F8 /* ContentView.swift in Sources */,
 				0851FCAD27675AEA0066A3F8 /* ViewsAndModifiersApp.swift in Sources */,
 				0851FCBF276761470066A3F8 /* ConditionalModifiers.swift in Sources */,
@@ -196,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0851FCBD27675E1A0066A3F8 /* SomeView.swift in Sources */,
+				0851FCC3276763980066A3F8 /* EnvironmentModifiers.swift in Sources */,
 				0851FCB027675AEA0066A3F8 /* ContentView.swift in Sources */,
 				0851FCAE27675AEA0066A3F8 /* ViewsAndModifiersApp.swift in Sources */,
 				0851FCC0276761470066A3F8 /* ConditionalModifiers.swift in Sources */,
