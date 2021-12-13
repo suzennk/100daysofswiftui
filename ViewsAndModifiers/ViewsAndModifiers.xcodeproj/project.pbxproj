@@ -25,6 +25,8 @@
 		0851FCC92767679B0066A3F8 /* ViewComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCC72767679B0066A3F8 /* ViewComposition.swift */; };
 		0851FCCB276768760066A3F8 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCCA276768760066A3F8 /* CustomModifiers.swift */; };
 		0851FCCC276768760066A3F8 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCCA276768760066A3F8 /* CustomModifiers.swift */; };
+		0851FCCE27676A570066A3F8 /* CustomContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCCD27676A570066A3F8 /* CustomContainers.swift */; };
+		0851FCCF27676A570066A3F8 /* CustomContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851FCCD27676A570066A3F8 /* CustomContainers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		0851FCC4276764FE0066A3F8 /* ViewsAsProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAsProperties.swift; sourceTree = "<group>"; };
 		0851FCC72767679B0066A3F8 /* ViewComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComposition.swift; sourceTree = "<group>"; };
 		0851FCCA276768760066A3F8 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		0851FCCD27676A570066A3F8 /* CustomContainers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +82,9 @@
 				0851FCC1276763980066A3F8 /* EnvironmentModifiers.swift */,
 				0851FCC4276764FE0066A3F8 /* ViewsAsProperties.swift */,
 				0851FCC72767679B0066A3F8 /* ViewComposition.swift */,
-				0851FC9F27675AEA0066A3F8 /* Assets.xcassets */,
 				0851FCCA276768760066A3F8 /* CustomModifiers.swift */,
+				0851FCCD27676A570066A3F8 /* CustomContainers.swift */,
+				0851FC9F27675AEA0066A3F8 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -208,6 +212,7 @@
 				0851FCCB276768760066A3F8 /* CustomModifiers.swift in Sources */,
 				0851FCAD27675AEA0066A3F8 /* ViewsAndModifiersApp.swift in Sources */,
 				0851FCBF276761470066A3F8 /* ConditionalModifiers.swift in Sources */,
+				0851FCCE27676A570066A3F8 /* CustomContainers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +228,7 @@
 				0851FCCC276768760066A3F8 /* CustomModifiers.swift in Sources */,
 				0851FCAE27675AEA0066A3F8 /* ViewsAndModifiersApp.swift in Sources */,
 				0851FCC0276761470066A3F8 /* ConditionalModifiers.swift in Sources */,
+				0851FCCF27676A570066A3F8 /* CustomContainers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

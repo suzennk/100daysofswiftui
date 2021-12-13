@@ -18,6 +18,7 @@ struct ViewsAndModifiersApp: App {
             ViewsAsProperties()
             ViewComposition()
             CustomModifiers()
+            CustomContainers()
         }
     }
 }
