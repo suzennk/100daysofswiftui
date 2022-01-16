@@ -1,6 +1,6 @@
 //
 //  BetterRestApp.swift
-//  Shared
+//  BetterRest
 //
 //  Created by Susan Kim on 2022/01/16.
 //
