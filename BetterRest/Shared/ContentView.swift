@@ -8,29 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var wakeUp = Date.now
-    
     var body: some View {
-        VStack(spacing: 30) {
-            DatePicker("Please enter a date", selection: $wakeUp)
+        VStack {
+            // ordering by my locale
+            Text(Date.now, format: .dateTime.day().month().year())
             
-            Divider()
+            Text(Date.now.formatted(date: .long, time: .shortened))
             
-            DatePicker("", selection: $wakeUp)
-            
-            Divider()
-            
-            DatePicker("Please enter a date", selection: $wakeUp)
-                .labelsHidden()
-            
-            Divider()
-            
-            DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
-            
-            Divider()
-            
-            DatePicker("Please enter a date", selection: $wakeUp, in: Date.now...Date.now.addingTimeInterval(86400))
+            Text(Date.now.formatted(date: .long, time: .omitted))
         }
+    }
+    
+    func trivialExample() {
+        var components = DateComponents()
+        components.hour = 8
+        components.minute = 0
+        let date = Calendar.current.date(from: components) ?? Date.now
+        print(date)
+    }
+    
+    func example2() {
+        let components = Calendar.current.dateComponents([.hour, .minute], from: Date.now)
+        let hour = components.hour ?? 0
+        let minute = components.minute ?? 0
+        print(hour, minute)
     }
 }
 
