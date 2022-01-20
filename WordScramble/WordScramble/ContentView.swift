@@ -18,9 +18,6 @@ struct ContentView: View {
                 Section {
                     TextField("Enter your word", text: $newWord)
                         .textInputAutocapitalization(.none)
-                        .onSubmit {
-                            addNewWord()
-                        }
                 }
                 
                 Section {
@@ -33,6 +30,8 @@ struct ContentView: View {
                 }
             }
             .navigationTitle(rootWord)
+            .onSubmit(addNewWord)
+            .onAppear(perform: startGame)
         }
     }
     
@@ -48,6 +47,26 @@ struct ContentView: View {
             usedWords.insert(answer, at: 0)
         }
         newWord = ""
+    }
+    
+    func startGame() {
+        // 1. Find the URL for start.txt in our app
+        if let fileURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
+            // 2. Load start.txt into a String
+            if let startWords = try? String(contentsOf: fileURL) {
+                // 3. Split the string up into an array
+                let allWords = startWords.components(separatedBy: .newlines)
+                
+                // 4. Pick one random word, or use "silkworm" as a sensible default
+                rootWord = allWords.randomElement() ?? "silkworm"
+                
+                // If we are here everything has worked, so we can exit
+                return
+            }
+        }
+        
+        // If we are here, then there was a problem
+        fatalError("Could not load start.txt from bundle.")
     }
 }
 
