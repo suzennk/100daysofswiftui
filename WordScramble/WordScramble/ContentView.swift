@@ -8,76 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var result1: String = ""
-    @State var result2: String = ""
-    @State var result3: String = ""
-    @State var result4: String = ""
-
+    @State private var usedWords = [String]()
+    @State private var rootWord = ""
+    @State private var newWord = ""
+    
     var body: some View {
-        List {
-            Section("Random letter from [a b c]") {
-                Text(result1)
+        NavigationView {
+            List {
+                Section {
+                    TextField("Enter your word", text: $newWord)
+                        .textInputAutocapitalization(.none)
+                        .onSubmit {
+                            addNewWord()
+                        }
+                }
+                
+                Section {
+                    ForEach(usedWords, id: \.self) { word in
+                        HStack {
+                            Image(systemName: "\(word.count).circle.fill")
+                            Text(word)
+                        }
+                    }
+                }
             }
-            
-            Section("Separate multiline String") {
-                Text(result2)
-            }
-            
-            Section("Spell check [swift]") {
-                Text(result3)
-            }
-            
-            Section("Spell check [swiflljjfie]") {
-                Text(result4)
-            }
-        }
-        .onAppear {
-            test()
-            test2()
-            test3()
-            test4()
+            .navigationTitle(rootWord)
         }
     }
     
-    func test() {
-        let input = "a b c"
-        let letters = input.components(separatedBy: " ")
-        let letter = letters.randomElement()
-        let trimmed = letter?.trimmingCharacters(in: .whitespacesAndNewlines)
-        result1 = trimmed ?? ""
-    }
-    
-    func test2() {
-        let input = """
-a
-b
-c
-"""
-        let letters = input.components(separatedBy: "\n")
-        result2 = letters.joined(separator: ", ")
-    }
-    
-    func test3() {
-        let word = "swift"
-        let checker = UITextChecker()
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(
-            in: word,
-            range: range,
-            startingAt: 0,
-            wrap: false,
-            language: "en")
-        let allGood = misspelledRange.location == NSNotFound
-        result3 = allGood ? "Good!" : "Error in \(misspelledRange.description)"
-    }
-    
-    func test4() {
-        let word = "swiflljjfie"
-        let checker = UITextChecker()
-        let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        let allGood = misspelledRange.location == NSNotFound
-        result4 = allGood ? "Good!" : "Error in \(misspelledRange.description)"
+    func addNewWord() {
+        let answer = newWord
+            .lowercased()
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        guard answer.count > 0 else { return }
+        
+        // extra validation to come
+        
+        withAnimation {
+            usedWords.insert(answer, at: 0)
+        }
+        newWord = ""
     }
 }
 
