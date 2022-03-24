@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var rootWord = ""
     @State private var newWord = ""
     
+    @State private var points = 0
+    
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
@@ -42,6 +44,19 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Text("\(points)")
+                        .font(.headline)
+                    Text(" points")
+                    Spacer()
+                    Button {
+                        startGame()
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                    }
+                }
+            }
         }
     }
     
@@ -50,6 +65,11 @@ struct ContentView: View {
             .lowercased()
             .trimmingCharacters(in: .whitespacesAndNewlines)
         guard answer.count > 0 else { return }
+        
+        guard isNotStartWord(word: answer) else {
+            wordError(title: "Word is start word", message: "Try a different word")
+            return
+        }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
@@ -66,13 +86,23 @@ struct ContentView: View {
             return
         }
         
+        guard isLongEnough(word: answer) else {
+            wordError(title: "Word too short", message: "Try a longer word")
+            return
+        }
+        
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
+        
+        points += (answer.count * 10)
         newWord = ""
     }
     
     func startGame() {
+        usedWords = []
+        points = 0
+        newWord = ""
         // 1. Find the URL for start.txt in our app
         if let fileURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             // 2. Load start.txt into a String
@@ -116,6 +146,16 @@ struct ContentView: View {
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         
         return misspelledRange.location == NSNotFound
+    }
+    
+    func isLongEnough(word: String) -> Bool {
+        let count = word.count
+        
+        return count >= 3
+    }
+    
+    func isNotStartWord(word: String) -> Bool {
+        return word != rootWord
     }
     
     func wordError(title: String, message: String) {
