@@ -12,18 +12,30 @@ struct ImplicitAnimation: View {
     
     var body: some View {
         Button("Tap Me") {
-            animationAmount += 1
+//            animationAmount += 1
         }
         .padding(50)
         .background(.red)
         .foregroundColor(.white)
         .clipShape(Circle())
-        .scaleEffect(animationAmount)
-        // applies default animation to the view
-        // whenever animationAmount changes.
-        // takes effect on all properties of the view that change
-        .blur(radius: (animationAmount - 1) * 3)
-        .animation(.default, value: animationAmount)
+        .overlay(
+            Circle()
+                .stroke(.red)
+                .scaleEffect(animationAmount)
+                .opacity(2 - animationAmount)
+                // applies animation to the view
+                // whenever animationAmount changes.
+                // takes effect on all properties of the view that change
+                // actually creates an instance of animation struct that has its own set of modifier
+                .animation(
+                    .easeInOut(duration: 1)
+                        .repeatForever(autoreverses: false),
+                    value: animationAmount
+                )
+        )
+        .onAppear {
+            animationAmount = 2
+        }
     }
 }
 
