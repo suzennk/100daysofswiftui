@@ -11,7 +11,10 @@ import SwiftUI
 struct AnimationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ImplicitAnimation()
+            ZStack {
+//                ImplicitAnimation()
+                AnimationBinding()
+            }
         }
     }
 }
