@@ -13,7 +13,8 @@ struct AnimationsApp: App {
         WindowGroup {
             ZStack {
 //                ImplicitAnimation()
-                AnimationBinding()
+//                AnimationBinding()
+                ExplicitAnimation()
             }
         }
     }

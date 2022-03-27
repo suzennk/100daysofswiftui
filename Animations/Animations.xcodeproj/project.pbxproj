@@ -15,6 +15,7 @@
 		4E7ADC2527F08E5800FB2ACE /* AnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ADC2427F08E5800FB2ACE /* AnimationsUITests.swift */; };
 		4E7ADC2727F08E5800FB2ACE /* AnimationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ADC2627F08E5800FB2ACE /* AnimationsUITestsLaunchTests.swift */; };
 		4E7ADC3427F0960200FB2ACE /* AnimationBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ADC3327F0960200FB2ACE /* AnimationBinding.swift */; };
+		4E7ADC3627F0986D00FB2ACE /* ExplicitAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ADC3527F0986D00FB2ACE /* ExplicitAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		4E7ADC2427F08E5800FB2ACE /* AnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsUITests.swift; sourceTree = "<group>"; };
 		4E7ADC2627F08E5800FB2ACE /* AnimationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4E7ADC3327F0960200FB2ACE /* AnimationBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBinding.swift; sourceTree = "<group>"; };
+		4E7ADC3527F0986D00FB2ACE /* ExplicitAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				4E7ADC0927F08E5600FB2ACE /* AnimationsApp.swift */,
 				4E7ADC0B27F08E5600FB2ACE /* ImplicitAnimation.swift */,
 				4E7ADC3327F0960200FB2ACE /* AnimationBinding.swift */,
+				4E7ADC3527F0986D00FB2ACE /* ExplicitAnimation.swift */,
 				4E7ADC0D27F08E5700FB2ACE /* Assets.xcassets */,
 				4E7ADC0F27F08E5700FB2ACE /* Preview Content */,
 			);
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E7ADC3627F0986D00FB2ACE /* ExplicitAnimation.swift in Sources */,
 				4E7ADC3427F0960200FB2ACE /* AnimationBinding.swift in Sources */,
 				4E7ADC0C27F08E5600FB2ACE /* ImplicitAnimation.swift in Sources */,
 				4E7ADC0A27F08E5600FB2ACE /* AnimationsApp.swift in Sources */,
