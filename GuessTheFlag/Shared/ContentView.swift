@@ -32,6 +32,11 @@ struct ContentView: View {
     @State private var correctAnswer = Int.random(in: 0...2)
     @State private var selectedCountry = ""
     
+    @State private var selectedIndex = 0
+    @State private var rotationAmount = 0.0
+    @State private var opacity = 1.0
+    @State private var scaleAmount = 1.0
+    
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -60,9 +65,22 @@ struct ContentView: View {
                         Button {
                             selectedCountry = countries[number]
                             flagTapped(number)
+                            
+                            selectedIndex = number
+                            withAnimation {
+                                rotationAmount += 360
+                                opacity = 0.25
+                                scaleAmount = 0.75
+                            }
                         } label: {
                             FlagImage(country: countries[number])
                         }
+                        .rotation3DEffect(
+                            .degrees(number == selectedIndex ? rotationAmount : 0),
+                            axis: (x: 0, y: 1, z: 0)
+                        )
+                        .opacity(number != selectedIndex ? opacity : 1.0)
+                        .scaleEffect(number != selectedIndex ? scaleAmount : 1.0)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -124,6 +142,10 @@ struct ContentView: View {
         } else {
             showingReset = true
         }
+        
+        rotationAmount = 0
+        opacity = 1.0
+        scaleAmount = 1.0
     }
     
     func resetGame() {
