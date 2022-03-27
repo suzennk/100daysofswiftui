@@ -15,7 +15,8 @@ struct AnimationsApp: App {
 //                ImplicitAnimation()
 //                AnimationBinding()
 //                ExplicitAnimation()
-                AnimationStack()
+//                AnimationStack()
+                AnimatingGestures()
             }
         }
     }

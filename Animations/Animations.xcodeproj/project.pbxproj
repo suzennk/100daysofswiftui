@@ -17,6 +17,7 @@
 		4E7ADC3427F0960200FB2ACE /* AnimationBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ADC3327F0960200FB2ACE /* AnimationBinding.swift */; };
 		4E7ADC3627F0986D00FB2ACE /* ExplicitAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ADC3527F0986D00FB2ACE /* ExplicitAnimation.swift */; };
 		4E7ADC3827F09A5A00FB2ACE /* AnimationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ADC3727F09A5A00FB2ACE /* AnimationStack.swift */; };
+		4E7ADC3A27F09C6400FB2ACE /* AnimatingGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7ADC3927F09C6400FB2ACE /* AnimatingGestures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		4E7ADC3327F0960200FB2ACE /* AnimationBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBinding.swift; sourceTree = "<group>"; };
 		4E7ADC3527F0986D00FB2ACE /* ExplicitAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimation.swift; sourceTree = "<group>"; };
 		4E7ADC3727F09A5A00FB2ACE /* AnimationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationStack.swift; sourceTree = "<group>"; };
+		4E7ADC3927F09C6400FB2ACE /* AnimatingGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingGestures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				4E7ADC3327F0960200FB2ACE /* AnimationBinding.swift */,
 				4E7ADC3527F0986D00FB2ACE /* ExplicitAnimation.swift */,
 				4E7ADC3727F09A5A00FB2ACE /* AnimationStack.swift */,
+				4E7ADC3927F09C6400FB2ACE /* AnimatingGestures.swift */,
 				4E7ADC0D27F08E5700FB2ACE /* Assets.xcassets */,
 				4E7ADC0F27F08E5700FB2ACE /* Preview Content */,
 			);
@@ -270,6 +273,7 @@
 				4E7ADC3627F0986D00FB2ACE /* ExplicitAnimation.swift in Sources */,
 				4E7ADC3427F0960200FB2ACE /* AnimationBinding.swift in Sources */,
 				4E7ADC0C27F08E5600FB2ACE /* ImplicitAnimation.swift in Sources */,
+				4E7ADC3A27F09C6400FB2ACE /* AnimatingGestures.swift in Sources */,
 				4E7ADC0A27F08E5600FB2ACE /* AnimationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
