@@ -16,7 +16,8 @@ struct AnimationsApp: App {
 //                AnimationBinding()
 //                ExplicitAnimation()
 //                AnimationStack()
-                AnimatingGestures()
+//                AnimatingGestures()
+                ShowHideViews()
             }
         }
     }
