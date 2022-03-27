@@ -14,7 +14,8 @@ struct AnimationsApp: App {
             ZStack {
 //                ImplicitAnimation()
 //                AnimationBinding()
-                ExplicitAnimation()
+//                ExplicitAnimation()
+                AnimationStack()
             }
         }
     }
