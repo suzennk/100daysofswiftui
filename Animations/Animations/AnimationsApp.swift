@@ -17,7 +17,8 @@ struct AnimationsApp: App {
 //                ExplicitAnimation()
 //                AnimationStack()
 //                AnimatingGestures()
-                ShowHideViews()
+//                ShowHideViews()
+                CustomTransitions()
             }
         }
     }
